@@ -232,9 +232,11 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 #keyboard backlight
 #bindsym XF86WakeUp exec --no-startup-id ~/.config/i3/toggle.sh
+bindsym $mod+Shift+g exec google-chrome-stable
+
 
 # hdmi-1
-bindsym $mod+Shift+a exec --no-startup-id arandr
+bindsym $mod+Shift+a exec --no-startup-id sh -c "pgrep -x arandr || arandr"
 for_window [class="Arandr"] floating enable, on mouse
 
 # lock/suspend
